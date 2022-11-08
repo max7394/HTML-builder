@@ -12,3 +12,7 @@ readFile.on('line', (input) => {
     readFile.close(console.log('Good Bye!'));
   }
 });
+
+readFile.on('SIGINT', function() {
+  readFile.close(console.log('\nGood Bye!'));
+});
